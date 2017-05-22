@@ -1,0 +1,161 @@
+<!--Autor de Interfaz: Andres Guillermo Doncel
+    Ingeniero Multimedia 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Pago Rechazado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+    <link rel="stylesheet" href="assets/css/stylesApp.css">
+</head>
+
+<body style="font-family:Muli, sans-serif;">
+    <div>
+        <nav class="navbar navbar-default navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-link" href="#"><img src="assets/img/logo.png" class="logo" style="width:178px;height:40px;"></a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="#">INGRESAR </a> <a class="btn btn-default action-button" role="button" href="#">CREAR CUENTA</a></p>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-10">
+                                <div style="margin-top:20px" class="alert alert-danger" role="alert">
+                                    <strong>Upss.</strong> Al menos uno de los campos de datos de pago no es válido.
+                                </div>
+                                <div class="text-center">
+                                    <h2 style="color: #515151;">Comprobante de pago #1212321232</h2>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-4 col-lg-4 pull-left">
+                                        <div style="height: 174px" class="panel panel-default height">
+                                            <div class="panel-heading text-center">Detalles de facturación</div>
+                                            <div class="panel-body">
+                                                <strong>Cliente:</strong> Pedro Pérez<br>
+                                                <strong>Email:</strong> pedroperez@micomercio.com<br>
+                                                <strong>Razón social:</strong> Mi Razón Social S.A.<br>
+                                                <strong>NIT:</strong> 800.000.000<br>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 col-lg-4">
+                                        <div class="panel panel-default height">
+                                            <div class="panel-heading text-center">Información del pago</div>
+                                            <div class="panel-body">
+                                                <strong>Franquicia:</strong> Visa<br>
+                                                <strong>N° Tarjeta:</strong> ***** 332<br>
+                                                <strong>Banco:</strong> Banco de pruebas<br>
+                                                <strong>Motivo:</strong> 01 - Rechazada<br>
+                                                <strong>Estado:</strong> <span style="color: #a94442; font-weight: 800">Transacción Rechazada</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 col-lg-4">
+                                        <div class="panel panel-default height" style="height: 174px">
+                                            <div class="panel-heading text-center">Detalle</div>
+                                            <div class="panel-body">
+                                                <strong>Fecha y Hora:</strong> 2008-09-05<br>
+                                                <strong>Dirección IP:</strong> 192.28.25.123<br>
+                                                <strong>Autorización/CUS:</strong> 123456
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="text-center" id="title-orderSummary"><strong>Resumen de orden - REF-001</strong></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-condensed">
+                                                <thead>
+                                                    <tr>
+                                                        <td><strong>Nombre Item</strong></td>
+                                                        <td class="text-center"><strong>Valor</strong></td>
+                                                        <td class="text-center"><strong>Cantidad</strong></td>
+                                                        <td class="text-right"><strong>Total</strong></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Item N°1</td>
+                                                        <td class="text-center">COP $116.000.00</td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-right">COP $116.000.00</td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td class="emptyrow"></td>
+                                                        <td class="emptyrow"></td>
+                                                        <td class="emptyrow text-center"><strong>IVA</strong></td>
+                                                        <td class="emptyrow text-right">COP $16.000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="emptyrow"><strong>Descripción</strong></td>
+                                                        <td class="text-center">Mi Comercio - Sitio Web - REF-001</td>
+                                                        <td class="emptyrow text-center"><strong>Total</strong></td>
+                                                        <td class="emptyrow text-right"><span style="color: #9AB54F; font-weight: 800">COP $132.000.00</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4"></div>
+                <div class="col-lg-6 col-md-4 social-icons" style="padding:0px;"><a href="https://www.facebook.com/PlacetoPay/"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/PlacetoPay/"><i class="icon ion-social-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCk90raCeHFRDrC14I5-7XDg"><i class="icon ion-social-youtube"></i></a>
+                    <p id="copyright">Place to Pay&nbsp;© 2017 -&nbsp;<a href="https://www.placetopay.com/terminos-y-condiciones/" target="_blank">Términos y condiciones</a> / Diseñado y desarrollado por&nbsp;<a href="http://www.mathagencia.com/"><strong>mth</strong></a>                        </p>
+                </div>
+                <div class="col-lg-3 col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

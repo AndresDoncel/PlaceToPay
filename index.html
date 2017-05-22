@@ -1,0 +1,353 @@
+<!--Autor de Interfaz: Andres Guillermo Doncel
+    Ingeniero Multimedia 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="assets/css/stylesApp.css">
+
+</head>
+
+<body style="font-family:Muli, sans-serif;">
+    <!--Ventana Modal -->
+    <div class="modal fade" role="dialog" tabindex="-1" id="preview" style="margin-top:130px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Transacción exitosa</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Ahora puedes descargar tu comprobante electronico.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Salir </button>
+                    <button class="btn btn-default" type="button">Ver comprobante</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!--Menu -->
+        <nav class="navbar navbar-default navigation-clean-button">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-link" href="#"><img src="assets/img/logo.png" class="logo" style="width:178px;height:40px;"></a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="#">INGRESAR </a> <a class="btn btn-default action-button" role="button" href="#">CREAR CUENTA</a></p>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+
+        <div class="container">
+            <!--Container de recoleccion de datos personales de usuario-->
+            <div class="row panel-payment">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title title-panel">Datos personales</h3>
+                                </div>
+                                <div class="panel-body panel-body-data">
+                                    <form data-toggle="validator" role="form" id="form-pay">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">person</i></span>
+                                                        <input class="form-control form-contac" type="text" name="name" required="" placeholder="Nombre" id="data-name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">person</i></span>
+                                                        <input class="form-control form-contac" type="text" name="lastname" required="" placeholder="Apellido">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group form-contac">
+                                                    <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">person_pin</i></span>
+                                                        <select class="form-control form-contac" required="">
+                                                            <option value="12" selected="">Tipo de documento</option>
+                                                            <option value="14">Cedula de ciudadania</option>
+                                                            <option value="13">Pasaporte</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons material-icons" id="icon-id">perm_identity</i></span>
+                                                        <input class="form-control form-contac" type="text" name="number-id" placeholder="N° de identificación" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">mail</i></span>
+                                                        <input class="form-control form-contac" type="email" name="email" required="" placeholder="Correo electronico">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">phone</i></span>
+                                                        <input class="form-control form-contac" type="tel" name="phone" required="" placeholder="Teléfono">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Container de recoleccion de datos para el metodo de pago -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title title-panel">Seleccione el método de pago</h3>
+                                </div>
+                                <div class="panel-body panel-body-data">
+                                    <div>
+                                        <ul class="nav nav-tabs nav-justified">
+                                            <li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="material-icons" style="color:rgb(85,85,85);">credit_card</i></a></li>
+                                            <li><a href="#tab-2" id="PSE-link" role="tab" data-toggle="tab"><span id="pse-pay" class="material-icons" style="font-family:Muli, sans-serif;">PSE </span></a></li>
+                                            <li><a href="#tab-3" role="tab" data-toggle="tab"><i class="material-icons" style="color:rgb(85,85,85);">attach_money</i></a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" role="tabpanel" id="tab-1">
+                                                <div class="col-md-12 panelpayment">
+                                                    <div class="row .payment-dialog-row">
+                                                        <div class="col-md-12 col-md-offset-0 col-xs-12">
+                                                            <div class="panel panel-default credit-card-box">
+                                                                <div class="panel-heading panelMethodPay" id="panel-cardcredit">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-xs-6" style="margin-top:13px;"><span class="panel-title">Tarjeta de credito</span></div>
+                                                                        <div class="col-md-6 col-sm-offset-0 col-xs-6"><img class="img-responsive panel-title-image" src="assets/img/accepted_cards.png"></div>
+                                                                    </div>
+                                                                    <h3 class="panel-title"></h3>
+                                                                </div>
+                                                                <div class="panel-body panel-body-data">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardNumber">N° de tarjeta</label>
+                                                                                <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">credit_card</i></span>
+                                                                                    <input class="form-control form-contac" type="text" name="credit-card" required="" placeholder="X X X X X X X X X X X X X X X X" maxlength="16" minlength="16">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-4 col-xs-12">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardExpiry">Fecha de vencimiento</label>
+                                                                                <input class="form-control" type="month" name="date-expire" required="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-lg-offset-0 col-md-4 col-xs-12 pull-right">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardCVC">Codigo CVC</label>
+                                                                                <input class="form-control" type="text" name="cvc-code" required="" placeholder="X X X" maxlength="3" minlength="3" autofocus="" autocomplete="on" inputmode="numeric">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="couponQuota">N° de cuotas</label>
+                                                                                <input class="form-control" type="text" name="numer-quota" required="" placeholder="X X" maxlength="2" minlength="1">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" role="tabpanel" id="tab-2">
+                                                <div class="col-md-12 panelpayment">
+                                                    <div class="row .payment-dialog-row">
+                                                        <div class="col-md-12 col-md-offset-0 col-xs-12">
+                                                            <div class="panel panel-default credit-card-box">
+                                                                <div class="panel-heading panelMethodPay" id="panel-cardcredit">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-xs-6" style="margin-top:13px;"><span class="panel-title">Pagos seguros en línea</span></div>
+                                                                        <div class="col-md-6 col-sm-offset-0 col-xs-6"></div>
+                                                                    </div>
+                                                                    <h3 class="panel-title"></h3>
+                                                                </div>
+                                                                <div class="panel-body panel-body-data">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-xs-12">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardNumber">Tipo de persona</label>
+                                                                                <select class="form-control form-contac" required="">
+                                                                                        <option value="12" selected="">Natural</option>
+                                                                                        <option value="13">Juridica</option>
+                                                                                    </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardNumber">Tipo de cuenta</label>
+                                                                                <select class="form-control form-contac" required="">
+                                                                                        <option value="12" selected="">Ahorros</option>
+                                                                                        <option value="13">Corriente</option>
+                                                                                    </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-6 col-xs-12">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardExpiry">Banco </label>
+                                                                                <select class="form-control form-contac" required="">
+                                                                                        <option value="12" selected="">Banco de Bogotá</option>
+                                                                                        <option value="13">Banco Popular</option>
+                                                                                        <option value="14">Banco Santander</option>
+                                                                                        <option value="">Bancolombia</option>
+                                                                                        <option value="">The Royal Bank</option>
+                                                                                        <option value="">Citibank</option>
+                                                                                        <option value="">HSBC</option>
+                                                                                        <option value="">Banco GNB Sudameris</option>
+                                                                                        <option value="">BBVA</option>
+                                                                                        <option value="">Helm Bank</option>
+                                                                                        <option value="">Red Multibanca Colpatria</option>
+                                                                                        <option value="">Banco de Occidente</option>
+                                                                                        <option value="">Banco Caja Social BCSC</option>
+                                                                                        <option value="">Bancafé</option>
+                                                                                        <option value="">Davivienda </option>
+                                                                                        <option value="">Banco AV Villas</option>
+                                                                                        <option value="">Colmena BCSC </option>
+                                                                                    </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-6 col-lg-offset-0 col-md-6 col-xs-12 pull-right">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label" for="cardNumber">N° de cuenta</label>
+                                                                                <div class="input-group"><span class="inputs-color-icons input-group-addon"><i class="material-icons">credit_card</i></span>
+                                                                                    <input class="form-control form-contac" type="text" name="account-number" required="" placeholder="X X X X X X X X X X X X X X X X">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" role="tabpanel" id="tab-3">
+                                                <div class="col-md-12 panelpayment">
+                                                    <div class="row .payment-dialog-row">
+                                                        <div class="col-md-12 col-md-offset-0 col-xs-12">
+                                                            <div class="panel panel-default credit-card-box">
+                                                                <div class="panel-heading panelMethodPay" id="panel-cardcredit">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-xs-6" style="margin-top:13px;"><span class="panel-title">Pago en efectivo</span></div>
+                                                                        <div class="col-md-6 col-sm-offset-0 col-xs-6"></div>
+                                                                    </div>
+                                                                    <h3 class="panel-title"></h3>
+                                                                </div>
+                                                                <div class="panel-body panel-body-data">
+                                                                    <p id="pay-efecty">Para realizar el pago en efectivo comunícate con nuestras líneasde atención gratuita para obtener más información: Tel. +57 (4) 444 2310 </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container de resumen de compra-->
+                <div class="col-md-4 col-md-offset-0" style="height:310px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default panel-body-data">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title title-panel">Resumen de la compra</h3>
+                                </div>
+                                <div class="panel-body body-resumebuy" style="padding-bottom:0px;">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row" id="row-ref">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><span class="resumen-buy">N° de referencia</span></div>
+                                                <div class="col-lg-6 col-md-6 col-xs-6" style="margin-top:3px;"><span>REF-001 </span></div>
+                                            </div>
+                                            <div class="row" id="row-description">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><span class="resumen-buy">Descripción </span></div>
+                                                <div class="col-lg-6 col-md-6 col-xs-6"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ,consectetu.Lorem ipsum dolor sit amet,..&nbsp;&nbsp;</span></div>
+                                            </div>
+                                            <div class="row" id="row-total">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><span class="resumen-buy">Total a pagar </span></div>
+                                                <div class="col-lg-6 col-md-6 col-xs-6"><span id="price-pay">COP $116.000.00 </span></div>
+                                            </div>
+                                            <div class="row" id="raw-btn-confirm">
+                                                <div class="col-lg-12 col-md-12" style="padding:0px;">
+                                                    <button class="btn btn-default btn-block btn-confirm" type="submit" id="boton-success">CONFIRMAR PAGO</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div class="footer">
+        <!--Container para el footer-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4"></div>
+                <div class="col-lg-6 col-md-4 social-icons" style="padding:0px;"><a href="https://www.facebook.com/PlacetoPay/" target="blank"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/PlacetoPay/" target="blank"><i class="icon ion-social-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCk90raCeHFRDrC14I5-7XDg" target="blank"><i class="icon ion-social-youtube"  ></i></a>
+                    <p id="copyright">Place to Pay&nbsp;© 2017 -&nbsp;<a href="https://www.placetopay.com/terminos-y-condiciones/" target="_blank">Términos y condiciones</a> / Diseñado y desarrollado por&nbsp;<a href="http://www.mathagencia.com/" target="blank"><strong>mth</strong></a>                        </p>
+                </div>
+                <div class="col-lg-3 col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+
+
+
+
+</body>
+
+</html>
